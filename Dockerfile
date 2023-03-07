@@ -6,8 +6,8 @@ LABEL maintainer="Dave Conroy (github.com/tiredofit)"
 
 ARG FREESCOUT_VERSION
 
-ENV FREESCOUT_VERSION=${FREESCOUT_VERSION:-"1.8.66"} \
-    FREESCOUT_REPO_URL=https://github.com/freescout-helpdesk/freescout \
+ENV FREESCOUT_VERSION=${FREESCOUT_VERSION:-"feature/AEKR-1770_password-policy"} \
+    FREESCOUT_REPO_URL=https://github.com/Feder8-Platform/freescout \
     NGINX_WEBROOT=/www/html \
     NGINX_SITE_ENABLED=freescout \
     PHP_CREATE_SAMPLE_PHP=FALSE \
@@ -23,8 +23,8 @@ ENV FREESCOUT_VERSION=${FREESCOUT_VERSION:-"1.8.66"} \
     PHP_ENABLE_SIMPLEXML=TRUE \
     PHP_ENABLE_TOKENIZER=TRUE \
     PHP_ENABLE_ZIP=TRUE \
-    IMAGE_NAME="tiredofit/freescout" \
-    IMAGE_REPO_URL="https://github.com/tiredofit/docker-freescout/"
+    IMAGE_NAME="feder8/freescout" \
+    IMAGE_REPO_URL="https://github.com/Feder8-Platform/docker-freescout/"
 
 RUN source /assets/functions/00-container && \
     set -x && \
